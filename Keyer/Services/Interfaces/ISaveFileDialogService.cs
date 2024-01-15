@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Keyer.Services.Interfaces
+﻿namespace Keyer.Services.Interfaces
 {
     public interface ISaveFileDialogService
     {
-        void Save();
+        void Save(Bitmap bitmap);
     }
 }

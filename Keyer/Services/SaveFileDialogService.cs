@@ -1,27 +1,19 @@
 ﻿using Keyer.Services.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Drawing.Imaging;
 
 namespace Keyer.Services
 {
     public class SaveFileDialogService : ISaveFileDialogService
     {
-        public void Save()
+        public void Save(Bitmap bitmap)
         {
-            Stream myStream;
             using (SaveFileDialog svd = new SaveFileDialog())
             {
                 svd.Filter = "Image files (*.png)|*.PNG";
 
                 if (svd.ShowDialog() == DialogResult.OK)
                 {
-                    if ((myStream = svd.OpenFile()) != null)
-                    {
-                        myStream.Close();
-                    }
+                    bitmap.Save(svd.FileName, ImageFormat.Png);
                 }
             }
         }
