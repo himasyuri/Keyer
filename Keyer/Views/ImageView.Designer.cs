@@ -39,7 +39,8 @@
             // 
             // Import
             // 
-            Import.Location = new Point(880, 12);
+            Import.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            Import.Location = new Point(894, 12);
             Import.Name = "Import";
             Import.Size = new Size(98, 39);
             Import.TabIndex = 0;
@@ -48,7 +49,8 @@
             // 
             // Export
             // 
-            Export.Location = new Point(984, 12);
+            Export.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            Export.Location = new Point(998, 12);
             Export.Name = "Export";
             Export.Size = new Size(98, 39);
             Export.TabIndex = 1;
@@ -57,8 +59,8 @@
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(880, 70);
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label1.Location = new Point(894, 70);
             label1.Name = "label1";
             label1.Size = new Size(88, 15);
             label1.TabIndex = 2;
@@ -66,7 +68,8 @@
             // 
             // btnChangeBackground
             // 
-            btnChangeBackground.Location = new Point(880, 101);
+            btnChangeBackground.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnChangeBackground.Location = new Point(894, 101);
             btnChangeBackground.Name = "btnChangeBackground";
             btnChangeBackground.Size = new Size(98, 39);
             btnChangeBackground.TabIndex = 3;
@@ -75,7 +78,8 @@
             // 
             // Back
             // 
-            Back.Location = new Point(984, 101);
+            Back.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            Back.Location = new Point(998, 101);
             Back.Name = "Back";
             Back.Size = new Size(98, 39);
             Back.TabIndex = 4;
@@ -84,9 +88,12 @@
             // 
             // ImageWindow
             // 
-            ImageWindow.Location = new Point(12, 12);
+            ImageWindow.Anchor = AnchorStyles.None;
+            ImageWindow.ImageLocation = "";
+            ImageWindow.Location = new Point(3, 12);
             ImageWindow.Name = "ImageWindow";
-            ImageWindow.Size = new Size(862, 535);
+            ImageWindow.Size = new Size(885, 588);
+            ImageWindow.SizeMode = PictureBoxSizeMode.AutoSize;
             ImageWindow.TabIndex = 5;
             ImageWindow.TabStop = false;
             // 
@@ -94,7 +101,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1094, 559);
+            AutoSize = true;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            ClientSize = new Size(1101, 612);
             Controls.Add(ImageWindow);
             Controls.Add(Back);
             Controls.Add(btnChangeBackground);

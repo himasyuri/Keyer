@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Keyer.Views
+﻿namespace Keyer.Views
 {
     public interface IImageView
     {
         Image Image { get; set; }
-        
+
         Color KeyerColor { get; set; }
 
         event EventHandler ImportImage;

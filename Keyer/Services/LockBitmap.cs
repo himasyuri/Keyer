@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing.Imaging;
-using System.Linq;
+﻿using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Keyer.Services
 {
@@ -35,7 +30,7 @@ namespace Keyer.Services
 
                 Rectangle rect = new Rectangle(0, 0, Width, Height);
 
-                Depth = System.Drawing.Bitmap.GetPixelFormatSize(source.PixelFormat);
+                Depth = Bitmap.GetPixelFormatSize(source.PixelFormat);
 
                 if (Depth != 8 && Depth != 24 && Depth != 32)
                 {
@@ -109,7 +104,7 @@ namespace Keyer.Services
         public void SetPixel(int x, int y, Color color)
         {
             int cCount = Depth / 8;
-    
+
             int i = ((y * Width) + x) * cCount;
 
             if (Depth == 32) // For 32 bpp set Red, Green, Blue and Alpha
